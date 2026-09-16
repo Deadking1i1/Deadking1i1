@@ -1,0 +1,12 @@
+{
+  "name": "shadowblue-profile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GitHub profile README and interactive ShadowBlue system artifacts",
+  "scripts": {
+    "validate": "node scripts/validate.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

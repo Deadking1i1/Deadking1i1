@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="ShadowBlue system artifacts — an interactive WebGL portfolio experience by Ewan, Software Engineer.">
+  <title>ShadowBlue // System Artifacts</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#artifact-console">Skip to artifact console</a>
+
+  <header class="topbar">
+    <a class="brand" href="https://github.com/Deadking1i1" aria-label="ShadowBlue on GitHub">
+      <span class="brand-mark" aria-hidden="true">♛</span>
+      <span><strong>DEADKING1I1</strong><small>SHADOWBLUE // SOFTWARE ENGINEER</small></span>
+    </a>
+    <div class="system-state"><i aria-hidden="true"></i> SYSTEM ONLINE</div>
+  </header>
+
+  <main id="artifact-console">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">INTERACTIVE SYSTEM // ARTIFACT ARRAY 01–02</p>
+      <h1 id="page-title">Advanced system artifacts</h1>
+      <p>Drag to rotate. Move to inspect. Scroll or pinch to adjust range. Select an artifact to release a restrained energy pulse.</p>
+    </section>
+
+    <section class="viewport-shell" aria-label="Interactive 3D globe and crystal">
+      <canvas id="scene" aria-label="Interactive graphite network globe and crimson-core crystal" tabindex="0"></canvas>
+      <div id="webgl-fallback" class="fallback" hidden>
+        <div><img src="../assets/globe.svg" alt="Animated graphite network globe"></div>
+        <div><img src="../assets/crystal.svg" alt="Animated smoked crystal with crimson core"></div>
+        <p>WebGL is unavailable. The GitHub-safe animated artifact set is shown instead.</p>
+      </div>
+
+      <article class="artifact-label artifact-label--globe">
+        <span>ARTIFACT // 01</span>
+        <h2>Network orb</h2>
+        <p>Graphite sphere · silver telemetry grid · crimson node field</p>
+      </article>
+
+      <article class="artifact-label artifact-label--crystal">
+        <span>ARTIFACT // 02</span>
+        <h2>Crimson core</h2>
+        <p>Smoked crystal · metallic edges · suspended energy fragments</p>
+      </article>
+
+      <div class="reticle reticle--left" aria-hidden="true"></div>
+      <div class="reticle reticle--right" aria-hidden="true"></div>
+      <p class="reduced-note" hidden>Reduced motion is active. Direct interaction remains available.</p>
+    </section>
+
+    <section class="readout" aria-label="System design principles">
+      <div><span>01</span><strong>BUILD</strong><small>Systems that work</small></div>
+      <div><span>02</span><strong>AUTOMATE</strong><small>Remove repetition</small></div>
+      <div><span>03</span><strong>IMPROVE</strong><small>Leave things better</small></div>
+      <a href="https://github.com/Deadking1i1/Studyspace"><span>PRIMARY</span><strong>STUDY SPACE</strong><small>Open verified repository ↗</small></a>
+    </section>
+  </main>
+
+  <footer>
+    <p>GOOD SYSTEMS CREATE BETTER PEOPLE.</p>
+    <a href="https://github.com/Deadking1i1">GITHUB PROFILE ↗</a>
+  </footer>
+
+  <noscript>
+    <div class="noscript">JavaScript is required for the WebGL interaction. The animated SVG versions remain available in the profile README.</div>
+  </noscript>
+  <script>
+    window.setTimeout(() => {
+      if (document.documentElement.dataset.webglReady) return;
+      document.querySelector("#scene").hidden = true;
+      document.querySelector("#webgl-fallback").hidden = false;
+    }, 5000);
+  </script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
