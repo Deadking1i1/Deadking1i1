@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 root = Path(__file__).resolve().parent.parent
 errors = []
 
-for svg in sorted((root / "assets").glob("*.svg")):
+for svg in sorted(list((root / "assets").glob("*.svg")) + list((root / "generated").glob("*.svg"))):
     try:
         ET.parse(svg)
     except ET.ParseError as exc:

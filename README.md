@@ -97,18 +97,14 @@ Deadking1i1@ShadowBlue:~$ _
 
 <div align="center">
 
-<a href="https://github.com/Deadking1i1">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Deadking1i1&show_icons=true&hide_border=true&bg_color=050505&title_color=ff1744&text_color=e5e7eb&icon_color=dc143c&ring_color=8b0000" alt="Live GitHub statistics for Deadking1i1">
-</a>
-<a href="https://github.com/Deadking1i1?tab=repositories">
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Deadking1i1&layout=compact&hide_border=true&bg_color=050505&title_color=ff1744&text_color=e5e7eb" alt="Live language statistics for Deadking1i1">
-</a>
+<img width="49%" src="generated/stats.svg" alt="Repository-generated live GitHub statistics for Deadking1i1">
+<img width="49%" src="generated/languages.svg" alt="Repository-generated language usage for Deadking1i1">
 
-<img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=Deadking1i1&bg_color=050505&color=c0c0c0&line=dc143c&point=ff1744&area=true&area_color=8b0000&hide_border=true" alt="Live contribution activity graph for Deadking1i1">
+<img width="98%" src="generated/activity.svg" alt="Repository-generated contribution activity for Deadking1i1">
 
 </div>
 
-> Live cards are supplied by third-party services and may occasionally be rate-limited. No statistics are hardcoded in this repository.
+> Telemetry is regenerated daily from GitHub's APIs by this repository's `update-metrics` workflow. No values are hardcoded and no third-party statistics service is required.
 
 ![Crimson system divider](assets/divider.svg)
 

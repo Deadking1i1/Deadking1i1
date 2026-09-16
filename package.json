@@ -4,7 +4,8 @@
   "private": true,
   "description": "GitHub profile README and interactive ShadowBlue system artifacts",
   "scripts": {
-    "validate": "node scripts/validate.mjs"
+    "validate": "node scripts/validate.mjs",
+    "metrics": "python scripts/generate_metrics.py"
   },
   "engines": {
     "node": ">=20"

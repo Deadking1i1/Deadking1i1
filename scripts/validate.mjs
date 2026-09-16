@@ -12,11 +12,15 @@ const required = [
   "assets/crystal.svg",
   "assets/terminal.svg",
   "assets/divider.svg",
+  "generated/stats.svg",
+  "generated/languages.svg",
+  "generated/activity.svg",
   "docs/index.html",
   "docs/styles.css",
   "docs/app.js",
   ".github/workflows/pages.yml",
-  ".github/workflows/validate.yml"
+  ".github/workflows/validate.yml",
+  ".github/workflows/update-metrics.yml"
 ];
 
 for (const path of required) {

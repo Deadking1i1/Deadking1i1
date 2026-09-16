@@ -28,8 +28,9 @@ The Pages workflow deploys the interactive experience from `docs/` with shared a
 ## External services
 
 - Three.js is pinned to `0.186.0` from jsDelivr in `docs/index.html`.
-- GitHub statistics use public `github-readme-stats` and `github-readme-activity-graph` endpoints. They can be rate-limited; the README does not hardcode their values.
-- No token or secret is required by either workflow.
+- GitHub statistics and the contribution calendar are generated into `generated/` from GitHub's own REST and GraphQL APIs. The scheduled workflow uses the repository-scoped `GITHUB_TOKEN`; no personal token or third-party statistics service is required.
+- The generated metric files are committed by `github-actions[bot]` only when their content changes.
+- No custom secret is required by any workflow.
 
 ## Inputs still needed
 
