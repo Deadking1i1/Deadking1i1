@@ -16,6 +16,7 @@ const required = [
   "generated/languages.svg",
   "generated/activity.svg",
   "docs/index.html",
+  "docs/favicon.svg",
   "docs/styles.css",
   "docs/app.js",
   ".github/workflows/pages.yml",
