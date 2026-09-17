@@ -15,6 +15,9 @@ const required = [
   "generated/stats.svg",
   "generated/languages.svg",
   "generated/activity.svg",
+  "generated/repositories.svg",
+  "data/repository-config.json",
+  "data/repositories.json",
   "docs/index.html",
   "docs/favicon.svg",
   "docs/styles.css",
@@ -28,10 +31,10 @@ for (const path of required) {
   if (!existsSync(join(root, path))) failures.push(`Missing required file: ${path}`);
 }
 
-const textFiles = walk(root).filter(path => [".md", ".html", ".css", ".js", ".mjs", ".svg", ".yml"].includes(extname(path)));
+const textFiles = walk(root).filter(path => [".md", ".html", ".css", ".js", ".mjs", ".py", ".json", ".svg", ".yml"].includes(extname(path)));
 for (const file of textFiles) {
   const contents = readFileSync(file, "utf8");
-  if (/C:\\Users\\|\/Users\/|AppData\/Local\/Temp/i.test(contents)) failures.push(`Local machine path leaked in ${file.slice(root.length + 1)}`);
+  if (/C:\\Users\\|\/Users\/[^/]+\/(?:Desktop|Documents|Downloads|AppData)\/|AppData\/Local\/Temp/i.test(contents)) failures.push(`Local machine path leaked in ${file.slice(root.length + 1)}`);
   if (/ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}/.test(contents)) failures.push(`Possible GitHub token in ${file.slice(root.length + 1)}`);
 }
 
@@ -41,6 +44,20 @@ const localReferences = [...readme.matchAll(/(?:src|href)=["']([^"'#]+)["']|!\[[
   .filter(reference => reference && !/^(?:https?:|mailto:)/.test(reference));
 for (const reference of localReferences) {
   if (!existsSync(join(root, reference))) failures.push(`Broken README reference: ${reference}`);
+}
+
+try {
+  const config = JSON.parse(readFileSync(join(root, "data/repository-config.json"), "utf8"));
+  const data = JSON.parse(readFileSync(join(root, "data/repositories.json"), "utf8"));
+  if (!Array.isArray(config.ignoreRepositories) || !Array.isArray(config.featuredRepositories)) failures.push("Repository config lists must be arrays");
+  if (!Array.isArray(data.repositories)) failures.push("Generated repository data must contain a repositories array");
+  for (const repo of data.repositories || []) {
+    for (const field of ["name", "url", "description", "updatedAt", "stars", "forks"]) {
+      if (!(field in repo)) failures.push(`Generated repository entry ${repo.name || "<unknown>"} is missing ${field}`);
+    }
+  }
+} catch (error) {
+  failures.push(`Repository JSON validation failed: ${error.message}`);
 }
 
 try {

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-17T11:11:59+00:00",
+  "username": "Deadking1i1",
+  "publicRepositoryCount": 2,
+  "trackedRepositoryCount": 1,
+  "unresolvedFeaturedRepositories": [
+    "JVR-Workshop",
+    "HD-Part-Sales",
+    "EON",
+    "NST"
+  ],
+  "repositories": [
+    {
+      "name": "Studyspace",
+      "fullName": "Deadking1i1/Studyspace",
+      "url": "https://github.com/Deadking1i1/Studyspace",
+      "description": "It's a bunch of python turtle flowers I've code",
+      "primaryLanguage": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "createdAt": "2026-02-04T17:01:20Z",
+      "updatedAt": "2026-08-26T20:12:56Z",
+      "pushedAt": "2026-08-26T19:38:14Z",
+      "firstDetectedAt": "2026-09-16T07:54:54+00:00",
+      "isNew": false,
+      "isFeatured": true,
+      "archived": false,
+      "fork": false,
+      "sizeKb": 14747
+    }
+  ]
+}

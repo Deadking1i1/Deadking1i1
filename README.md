@@ -1,12 +1,7 @@
 <div align="center">
 
-![ShadowBlue — Ewan, Software Engineer](assets/header.svg)
-
 <a href="https://deadking1i1.github.io/Deadking1i1/" aria-label="Open the interactive ShadowBlue system artifacts experience">
-  <img src="assets/globe.svg" width="49%" alt="Animated graphite globe with crimson network points and rotating orbital rings">
-</a>
-<a href="https://deadking1i1.github.io/Deadking1i1/" aria-label="Open the interactive ShadowBlue system artifacts experience">
-  <img src="assets/crystal.svg" width="49%" alt="Animated smoked crystal with a pulsing crimson core and orbiting fragments">
+  <img src="assets/header.svg" width="100%" alt="ShadowBlue command-center header with animated globe and crimson-core crystal">
 </a>
 
 <sub>SELECT AN ARTIFACT TO ENTER THE INTERACTIVE SYSTEM</sub>
@@ -70,6 +65,14 @@ Deadking1i1@ShadowBlue:~$ _
 
 <!-- Repository links for JVR Workshop, H&D Part Sales, EON, and NST intentionally remain omitted until verified URLs are provided. -->
 
+## Recent project discovery
+
+<a href="https://github.com/Deadking1i1?tab=repositories">
+  <img width="100%" src="generated/repositories.svg" alt="Automatically discovered recent public repositories for Deadking1i1">
+</a>
+
+> Refreshed every six hours from GitHub metadata. Featured projects remain manually curated; forks, archived repositories, the profile repository, and configured exclusions are filtered automatically.
+
 ## Technical matrix
 
 <div align="center">
@@ -104,7 +107,7 @@ Deadking1i1@ShadowBlue:~$ _
 
 </div>
 
-> Telemetry is regenerated daily from GitHub's APIs by this repository's `update-metrics` workflow. No values are hardcoded and no third-party statistics service is required.
+> Telemetry and repository discovery are regenerated every six hours from GitHub's APIs by this repository's `update-metrics` workflow. No values are hardcoded and no third-party statistics service is required.
 
 ![Crimson system divider](assets/divider.svg)
 

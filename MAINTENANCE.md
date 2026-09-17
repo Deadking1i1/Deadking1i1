@@ -29,6 +29,9 @@ The Pages workflow deploys the interactive experience from `docs/` with shared a
 
 - Three.js is pinned to `0.186.0` from jsDelivr in `docs/index.html`.
 - GitHub statistics and the contribution calendar are generated into `generated/` from GitHub's own REST and GraphQL APIs. The scheduled workflow uses the repository-scoped `GITHUB_TOKEN`; no personal token or third-party statistics service is required.
+- Public repository discovery is configured in `data/repository-config.json`. The generator writes normalized metadata to `data/repositories.json` and the README-facing panel to `generated/repositories.svg`.
+- Discovery runs every six hours, on manual dispatch, and after pushes to `main`. It sorts recent repositories by update, creation, and push timestamps.
+- `featuredRepositories` controls which repositories stay out of the automatic recent list. `ignoreRepositories`, `ignorePatterns`, `includeForks`, `includeArchived`, and `includeEmpty` control filtering.
 - The generated metric files are committed by `github-actions[bot]` only when their content changes.
 - No custom secret is required by any workflow.
 

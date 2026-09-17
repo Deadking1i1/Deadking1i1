@@ -5,7 +5,8 @@
   "description": "GitHub profile README and interactive ShadowBlue system artifacts",
   "scripts": {
     "validate": "node scripts/validate.mjs",
-    "metrics": "python scripts/generate_metrics.py"
+    "metrics": "python scripts/generate_metrics.py",
+    "test": "python -m unittest scripts/test_repository_discovery.py"
   },
   "engines": {
     "node": ">=20"

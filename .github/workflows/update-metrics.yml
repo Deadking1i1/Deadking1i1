@@ -2,7 +2,9 @@ name: Update profile metrics
 
 on:
   schedule:
-    - cron: "17 4 * * *"
+    - cron: "17 */6 * * *"
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -24,7 +26,7 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Generate metrics from GitHub APIs
+      - name: Discover repositories and generate profile assets
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: Deadking1i1
@@ -32,12 +34,12 @@ jobs:
 
       - name: Commit refreshed assets
         run: |
-          if git diff --quiet -- generated; then
+          if git diff --quiet -- generated data/repositories.json; then
             echo "Metrics are already current."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add generated
-          git commit -m "chore: refresh profile metrics"
+          git add data/repositories.json generated
+          git commit -m "chore: refresh profile data"
           git push

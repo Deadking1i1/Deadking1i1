@@ -1,0 +1,18 @@
+{
+  "ignoreRepositories": [
+    "Deadking1i1"
+  ],
+  "ignorePatterns": [],
+  "featuredRepositories": [
+    "Studyspace",
+    "JVR-Workshop",
+    "HD-Part-Sales",
+    "EON",
+    "NST"
+  ],
+  "includeForks": false,
+  "includeArchived": false,
+  "includeEmpty": true,
+  "excludeFeaturedFromRecent": false,
+  "maxRecentRepositories": 6
+}
