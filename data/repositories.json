@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-26T21:27:47+00:00",
+  "generatedAt": "2026-11-27T08:22:58+00:00",
   "username": "Deadking1i1",
-  "publicRepositoryCount": 4,
-  "trackedRepositoryCount": 3,
+  "publicRepositoryCount": 5,
+  "trackedRepositoryCount": 4,
   "unresolvedFeaturedRepositories": [
     "JVR-Workshop",
     "HD-Part-Sales",
@@ -11,6 +11,25 @@
     "NST"
   ],
   "repositories": [
+    {
+      "name": "lotus-turtle-animation",
+      "fullName": "Deadking1i1/lotus-turtle-animation",
+      "url": "https://github.com/Deadking1i1/lotus-turtle-animation",
+      "description": "Python Turtle lotus animation.",
+      "primaryLanguage": "Python",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "createdAt": "2026-11-06T07:47:29Z",
+      "updatedAt": "2026-11-27T02:13:02Z",
+      "pushedAt": "2026-11-06T07:49:00Z",
+      "firstDetectedAt": "2026-11-27T08:22:58+00:00",
+      "isNew": false,
+      "isFeatured": false,
+      "archived": false,
+      "fork": false,
+      "sizeKb": 1
+    },
     {
       "name": "I-SEE-YOU-Hidden-Letter",
       "fullName": "Deadking1i1/I-SEE-YOU-Hidden-Letter",
